@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Personal Website</h1>
+    
+        <nav class="menu-sections">
+                <div><button class="menu-button" onclick="showContent('content-about')">About Me</button></div>
+                <div><button class="menu-button" onclick="showContent('content-education')">Education</button></div>
+                <div><button class="menu-button" onclick="showContent('content-projects')">Personal Projects</button></div>
+                <div><button class="menu-button" onclick="showContent('content-professional')">Professioanl Experience</button></div>
+        </nav>
+        
+        <div class="contacts">
+            <div><text>Contacts:</text></div>
+            <div><a href="gpsunserrata@gmail.com">gpsunserrata@gmail.com</a></div>
+            <div><a href="some git link">Git Hub</a></div>
+        </div>
+    </header>
+
+    <div class="content-section" id="content-intro">
+        <p>Welcome to the site! Click the buttons above to see different content.</p>
+    </div>
+    <div class="content-section" id="content-about">
+        <h2>About Me</h2>
+        <p>Born in the North of Spain. Love exercsing, being outdoors and walking my dogs. Also have a deep interest in various engineering worlds.</p>
+        
+    </div>
+    <div class="content-section" id="content-education">
+        <h2>Education</h2>
+        <p>...</p>
+    </div>
+    <div class="content-section" id="content-projects">
+        <h2>My Projects</h2>
+        <p>...</p>
+    </div>
+
+    <script>
+        function showContent(sectionId) {
+            // Hide the home content
+            const intro = document.getElementById('content-intro')
+            intro.style.display = 'none';
+
+            // Hide all content sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => section.style.display = 'none');
+        
+            // Show the selected content section
+            const activeSection = document.getElementById(sectionId);
+            activeSection.style.display = 'block';
+        }
+    </script>
+
+    <footer>
+        <p>© 2024 Guillermo García Pérez. All rights reserved.</p>
+    </footer>
+</body>
+</html>
