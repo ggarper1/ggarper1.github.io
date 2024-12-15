@@ -56,20 +56,22 @@
         }
         
         async function showIdeas(databaseId) {
-            const VERCEL_URL = 'https://notion-proxy.vercel.app/api/notion';
+            const VERCEL_URL = 'https://notion-proxy-mdlifaiu8-guillermos-projects-2ddf35cc.vercel.app'
     
-            const ideasText = document.getElementById("ideas-text");
+            const ideasText = document.getElementById("ideas-text")
             
             try {
-                const response = await fetch(VERCEL_URL, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ 
-                        databaseId: databaseId 
-                    })
-                });
+                
+                const response = await fetch(VERCEL_URL, {method: 'GET'})
+                // const response = await fetch(VERCEL_URL, {
+                //     method: 'POST',
+                //     headers: {
+                //         'Content-Type': 'application/json'
+                //     },
+                //     body: JSON.stringify({ 
+                //         databaseId: databaseId 
+                //     })
+                // });
                 
                 const msg = await response.json()
                 console.log(msg)
@@ -77,12 +79,12 @@
                 if (response.ok) {
                     const data = await response.json();
                     // Example: Display the data
-                    ideasText.innerHTML = JSON.stringify(data, null, 2);
+                    ideasText.innerHTML = JSON.stringify(data, null, 2)
                 } else {
-                    ideasText.innerHTML = 'Error fetching data';
+                    ideasText.innerHTML = 'Error fetching data'
                 }
             } catch (error) {
-                ideasText.innerHTML = `Error: ${error.message}`;
+                ideasText.innerHTML = `Error: ${error.message}`
             }
         }
     </script>
