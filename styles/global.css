@@ -8,9 +8,9 @@ body {
 }
 
 /* Main content styles */
-main {
-    padding: 20px;
-}
+/* main { */
+/*     padding: 20px; */
+/* } */
 
 section {
     height: 100vh;
@@ -22,6 +22,29 @@ section {
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
+
+main {
+    padding-top: 10rem; /* Adjust this value based on your browser/nav bar height */
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+        
+/* Add more spacing between sections */
+section {
+    margin-bottom: 3rem; /* Increase spacing between sections */
+    padding-bottom: 2rem; /* Add padding within each section */
+}
+
+/* Optional: Add some top padding to section headings when they're targeted by anchors */
+section:target {
+    padding-top: 1rem;
+}
+
+/* Alternative approach: scroll-margin-top for smooth anchor navigation */
+section {
+    scroll-margin-top: 2rem;
+}
+
 
 section.active {
     opacity: 1;
@@ -36,6 +59,7 @@ h1 {
 
 .text-box {
     margin: 140px;
+    text-align: center;
 }
 
 /* Modal styles */
