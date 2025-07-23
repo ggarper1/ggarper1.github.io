@@ -1,17 +1,11 @@
 /* General styles */
-
-
 #links a {
-    color: #888;
+    color: rgba(46, 134, 193);
     text-decoration: none;
     transition: color 0.3s;
 }
 
 #links a:hover {
-    color: #555;
+    color: rgba(133, 193, 233);
     text-decoration: underline;
-}
-
-#links a:visited {
-    color: #aaa;
 }

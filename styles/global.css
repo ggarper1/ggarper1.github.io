@@ -62,8 +62,21 @@ h1 {
     text-align: center;
 }
 
+.text-box a {
+    color: rgba(46, 134, 193);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.text-box a:hover {
+    color: rgba(133, 193, 233);
+    text-decoration: underline;
+}
+
 /* Modal styles */
 .modal {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     position: fixed;
     z-index: 1;
     left: 0;
@@ -72,6 +85,8 @@ h1 {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.9);
+    background-color: transparent;
+    backdrop-filter: blur(20px);
     display: none;
     justify-content: center;
     align-items: center;
@@ -82,6 +97,7 @@ h1 {
     display: block;
     width: 80%;
     max-width: 700px;
+    max-height: 90vh;
 }
 
 .close {
