@@ -4,12 +4,8 @@ const modal = document.createElement('div');
 modal.classList.add('modal');
 const modalContent = document.createElement('img');
 modalContent.classList.add('modal-content');
-const closeBtn = document.createElement('span');
-closeBtn.classList.add('close');
-closeBtn.innerHTML = '&times;';
 
 modal.appendChild(modalContent);
-modal.appendChild(closeBtn);
 document.body.appendChild(modal);
 
 gridItems.forEach(item => {
@@ -22,12 +18,6 @@ gridItems.forEach(item => {
   });
 });
 
-closeBtn.addEventListener('click', () => {
+modal.addEventListener('click', () => {
   modal.style.display = 'none';
-});
-
-window.addEventListener('click', e => {
-  if (e.target === modal) {
-    modal.style.display = 'none';
-  }
 });
