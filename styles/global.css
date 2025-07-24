@@ -13,7 +13,8 @@ body {
 /* } */
 
 section {
-    height: 100vh;
+    min-height: 100vh;
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,14 +53,33 @@ section.active {
 }
 
 h1 {
-    font-size: 48px;
+    /* font-size: 48px; */
+    font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 700;
     margin-bottom: 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
 }
 
 .text-box {
-    margin: 140px;
+    margin: 5% 10%;
+    /* margin: 140px; */
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .text-box {
+        margin: 5%;
+    }
+
+    main {
+        padding-top: 5rem;
+    }
 }
 
 .text-box a {
