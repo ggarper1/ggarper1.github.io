@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Website</title>
     <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="styles/image_grid.css">
+    <link rel="stylesheet" href="styles/sections/image_grid.css">
     <link rel="stylesheet" href="styles/navigation_box.css">
     <link rel="stylesheet" href="styles/sections/links.css">
+    <link rel="stylesheet" href="styles/sections/projects.css">
 </head>
 <body>
     <main>
@@ -61,33 +62,51 @@
         <section id="projects">
             <h1>Projects</h1>
             <p class="text-box">
-                I dedicate some of my free time to personal projects. No projects added for now, they will soon come....
+                I dedicate some of my free time to personal projects. Click on any project to learn more about it.
             </p>
-            <div class="grid-container">
-              <div class="grid-item">
-              </div>
+            <div class="projects-grid">
+                <!-- Example Project Cards -->
+                <div class="project-card" onclick="openModal('CProblems')">
+                    <img src="images/cLogo.png" alt="C Problems" class="project-card-image">
+                    <div class="project-card-title">C Problems</div>
+                </div>
+                <div class="project-card" onclick="openModal('SimpleGame')">
+                    <img src="images/game.png" alt="Simple Game" class="project-card-image">
+                    <div class="project-card-title">Simple Game</div>
+                </div>
+
             </div>
         </section>
-        <!-- <section id="thoughts"> -->
-        <!--     <h1>Thoughts</h1> -->
-        <!--     <p class="text-box">I have no thoughs on anything for now.</p> -->
-        <!-- </section> -->
         <section id="links">
             <h1>Links</h1>
             <p><a href="https://github.com/ggarper1">GitHub</a></p>
         </section>
-
     </main>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModalOnOverlay(event)">
+        <div class="modal-content" id="modalContent">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <img id="modalImage" src="" alt="Project Image" class="modal-image">
+            <div class="modal-body">
+                <h2 class="modal-title" id="modalTitle">Project Title</h2>
+                <p class="modal-text" id="modalDescription">Project description goes here...</p>
+                <p class="modal-text" id="modalDetails">Additional details about the project.</p>
+            </div>
+        </div>
+    </div>
+
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#professional">Professional Life</a></li>
             <li><a href="#projects">Projects</a></li>
-            <!-- <li><a href="#thoughts">Thoughts</a></li> -->
             <li><a href="#links">Links</a></li>
         </ul>
     </nav>
+
     <script src="scripts/image_grid.js"></script>
     <script src="scripts/navigation.js"></script>
+    <script src="scripts/projects.js"></script>
 </body>
 </html>
