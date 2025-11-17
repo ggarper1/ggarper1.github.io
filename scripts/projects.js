@@ -24,7 +24,7 @@ const projectData = {
     content: [
       {
         type: 'text',
-        text: 'Soon more information will be posted about this game. The current focus now is implementing a ML model that can play the game, refining the frontend and implementing a Go backend that supports multiplayer match making and playing against the AI.'
+        text: 'Soon I will include a demonstration of how the game plays and document the progress of the project. The current focus now is implementing a ML model that can learn to play the game, refining the frontend and implementing a Go backend that supports multiplayer match making and playing against the AI.'
       },
       {
         type: 'links',
